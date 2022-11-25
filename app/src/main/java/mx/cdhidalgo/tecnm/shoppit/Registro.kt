@@ -13,7 +13,7 @@ class Registro : AppCompatActivity() {
     //vartables globales
 
     private lateinit var btnbck: ImageView
-    private lateinit var btnLogin: RelativeLayout
+    private lateinit var btnRegistro: RelativeLayout
 
     //campos
     private lateinit var nombre: TextInputLayout
@@ -29,13 +29,22 @@ class Registro : AppCompatActivity() {
         setContentView(R.layout.activity_registro)
 
         //findview
-        nombre = findViewById(R.id.LName)
-        apaterno = findViewById(R.id.LApellidoP)
-        correo = findViewById(R.id.LCorreo)
-        pass = findViewById(R.id.LPassword)
-        btnLogin = findViewById(R.id.btnLogin)
+        nombre = findViewById(R.id.txtNombre)
+        apaterno = findViewById(R.id.txtApellido)
+        correo = findViewById(R.id.txtCorreo)
+        pass = findViewById(R.id.txtPassword)
+        btnRegistro = findViewById(R.id.btnRegistro)
         btnbck = findViewById(R.id.btnBack)
 
+
+        btnRegistro.setOnClickListener{
+            val intent = Intent(this, CRegistro::class.java)
+            intent.putExtra("nombre", nombre.editText?.text.toString())
+            intent.putExtra("apaterno", apaterno.editText?.text.toString())
+            intent.putExtra("correo", correo.editText?.text.toString())
+            intent.putExtra("password", pass.editText?.text.toString())
+            startActivity(intent)
+        }
         btnbck.setOnClickListener{
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
