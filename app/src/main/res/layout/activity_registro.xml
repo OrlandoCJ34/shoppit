@@ -4,23 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Registro">
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="350dp"
-        android:layout_height="290dp"
+        android:layout_height="400dp"
         app:cardElevation="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.37">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -29,7 +44,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Login"
+                android:text="Registro"
                 android:textSize="25sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -38,14 +53,41 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Username">
+                android:hint="Nombre">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/username_right"
                     android:fontFamily="@font/poppinsmedium" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Apellido P">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Correo Electronico">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppinsmedium" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -56,18 +98,22 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/password_right"
+                    android:layout_height="46dp"
                     android:fontFamily="@font/poppinsmedium" />
             </com.google.android.material.textfield.TextInputLayout>
+
+
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_marginTop="32dp"
+        android:layout_marginLeft="50dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
 
@@ -76,9 +122,10 @@
             android:id="@+id/btnLogin"
             android:layout_width="217dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="85dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/button_back"
+            android:backgroundTint="@color/design_default_color_primary_variant"
             android:baselineAligned="false">
 
             <TextView
@@ -87,10 +134,13 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="Iniciar Sesion"
+                android:text="Registrar"
                 android:textColor="#fff"
                 android:textSize="22dp" />
         </RelativeLayout>
+
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -117,67 +167,17 @@
             android:src="@drawable/rounded_rectangle" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/g" />
-
-
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/tw" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-    </LinearLayout>
-
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/btnRegistro"
+        android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginBottom="36dp"
-        android:fontFamily="@font/poppinsbold"
-        android:text="Registrarme"
-
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:srcCompat="@drawable/arrow" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
