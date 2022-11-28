@@ -61,4 +61,11 @@ dependencies {
     // Also add the dependency for the Google Play services library and specify its version
     implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
+
+    //scanner
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
+
+
+
 }

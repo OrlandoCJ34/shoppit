@@ -23,6 +23,7 @@
             android:orientation="vertical">
 
             <TextView
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -33,6 +34,7 @@
                 android:textSize="25sp" />
 
             <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/usuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -48,10 +50,12 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                app:passwordToggleEnabled="true"
                 android:hint="Password">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -131,10 +135,10 @@
 
         <ImageView
             android:id="@+id/btnG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginRight="15dp"
-            android:src="@drawable/g" />
+            android:src="@drawable/google" />
 
         <ImageView
             android:id="@+id/btnGit"
@@ -170,7 +174,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
-        android:layout_marginEnd="163dp"
+        android:layout_marginEnd="155dp"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/poppinsbold"
         android:text="Registrarme"
