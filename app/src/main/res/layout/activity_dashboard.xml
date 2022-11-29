@@ -83,11 +83,10 @@
                         android:src="@drawable/add" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:text="Añadir Producto"
+                        android:layout_marginTop="5dp"
+                        android:text="Añadir/Editar Producto"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -118,7 +117,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-
+                        android:id="@+id/Eliminar"
                         android:layout_width="85dp"
                         android:layout_height="85dp"
                         android:padding="10dp"
@@ -170,8 +169,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Editar Producto"
-                        android:textSize="16sp"
+                        android:text="Still in Development"
+                        android:textSize="14sp"
                         android:textStyle="bold" />
 
 

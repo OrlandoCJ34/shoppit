@@ -4,6 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_marginTop="600dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar" />
+
     <com.budiyev.android.codescanner.CodeScannerView
         android:id="@+id/scanner_view"
         android:layout_width="match_parent"
@@ -16,6 +23,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#3F51B5"
             android:fontFamily="@font/poppinsmedium"
-            android:text="Listo" />
+            android:text="Agregar" />
+
+
     </com.budiyev.android.codescanner.CodeScannerView>
 </FrameLayout>

@@ -46,8 +46,7 @@
             android:fontFamily="@font/poppinsmedium"
             android:text="Etiqueta2"
             android:textColor="#1b396a"
-
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
 

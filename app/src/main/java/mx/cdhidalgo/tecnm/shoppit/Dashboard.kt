@@ -3,13 +3,12 @@ package mx.cdhidalgo.tecnm.shoppit
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import mx.cdhidalgo.tecnm.shoppit.CRUD.Agregar
+import mx.cdhidalgo.tecnm.shoppit.CRUD.Eliminar
 
 class Dashboard : AppCompatActivity() {
     lateinit var btnLogout:ImageView
@@ -17,6 +16,7 @@ class Dashboard : AppCompatActivity() {
 
     //Crud
     lateinit var agregar: ImageView
+    lateinit var eliminar: ImageView
 
 
 
@@ -28,9 +28,15 @@ class Dashboard : AppCompatActivity() {
         //findview
         btnLogout = findViewById(R.id.Logout)
         agregar = findViewById(R.id.Agregar)
+        eliminar = findViewById(R.id.Eliminar)
 
         agregar.setOnClickListener {
-            intent = Intent(this,Agregar::class.java)
+            intent = Intent(this, Agregar::class.java)
+            startActivity(intent)
+        }
+
+        eliminar.setOnClickListener{
+            intent = Intent(this, Eliminar::class.java)
             startActivity(intent)
         }
 

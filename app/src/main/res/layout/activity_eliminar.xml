@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CRUD.Agregar">
+    tools:context=".CRUD.Eliminar">
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -40,7 +42,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:fontFamily="@font/poppinsbold"
-                android:text="Agregar/Editar"
+                android:text="Eliminar"
                 android:textSize="25sp" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -50,14 +52,10 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Nombre de Producto"
-                android:inputType="text">
+                android:inputType="text"
+                android:hint="Nombre de Producto"/>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium" />
-            </com.google.android.material.textfield.TextInputLayout>
+
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -66,94 +64,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Precio"
-                android:inputType="textEmailAddress">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtstock"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:hint="Stock"
-                android:inputType="textEmailAddress">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinsmedium" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:inputType="textEmailAddress"
+                android:hint="Precio"/>
 
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvscan"
+                android:id="@+id/tvcodigo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:fontFamily="@font/poppinsmedium"
-                android:hint="Numero">
-
+                android:hint="Numero"
+                android:fontFamily="@font/poppinsmedium">
             </com.google.android.material.textview.MaterialTextView>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvproducto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:fontFamily="@font/poppinsmedium"
-                android:hint="Nombre Producto">
-
-            </com.google.android.material.textview.MaterialTextView>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/tvprecio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:fontFamily="@font/poppinsmedium"
-                android:hint="Precio">
-
-            </com.google.android.material.textview.MaterialTextView>
-
-
-            <RelativeLayout
-                android:id="@+id/btnValidar"
-                android:layout_width="80dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="260dp"
-
-                android:background="@drawable/button_back"
-                android:baselineAligned="false">
-
-                <TextView
-                    android:layout_width="199dp"
-                    android:layout_height="35dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="7dp"
-                    android:layout_marginTop="-3dp"
-                    android:layout_marginEnd="11dp"
-                    android:layout_marginBottom="17dp"
-                    android:fontFamily="@font/poppinsbold"
-                    android:gravity="center"
-                    android:text="Ok"
-                    android:textColor="#fff"
-                    android:textSize="24sp" />
-
-            </RelativeLayout>
 
 
         </LinearLayout>
@@ -172,7 +96,7 @@
 
 
         <RelativeLayout
-            android:id="@+id/btnAgregar"
+            android:id="@+id/btnEliminar"
             android:layout_width="217dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
@@ -193,16 +117,14 @@
                 android:layout_marginBottom="27dp"
                 android:fontFamily="@font/poppinsbold"
                 android:gravity="center"
-                android:text="Agregar"
+                android:text="Eliminar"
                 android:textColor="#fff"
                 android:textSize="24sp" />
 
         </RelativeLayout>
-
     </LinearLayout>
-
     <ImageView
-        android:id="@+id/qrScan"
+        android:id="@+id/qrScaneo"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginEnd="24dp"
@@ -214,7 +136,7 @@
         app:srcCompat="@drawable/qr" />
 
     <ImageView
-        android:id="@+id/backbtna"
+        android:id="@+id/backbtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"

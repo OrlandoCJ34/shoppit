@@ -1,4 +1,4 @@
-package mx.cdhidalgo.tecnm.shoppit
+package mx.cdhidalgo.tecnm.shoppit.Scanners
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -16,11 +16,15 @@ import com.budiyev.android.codescanner.CodeScannerView
 import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ErrorCallback
 import com.budiyev.android.codescanner.ScanMode
+import mx.cdhidalgo.tecnm.shoppit.CRUD.Agregar
+import mx.cdhidalgo.tecnm.shoppit.CRUD.Eliminar
+import mx.cdhidalgo.tecnm.shoppit.R
 
 class Scanner : AppCompatActivity() {
     //variables locales
     private lateinit var codeScanner: CodeScanner
     private lateinit var btnYa:Button
+    private lateinit var btnBorrar:Button
     var code =""
     val MY_CAMERA_PERMISSION_REQUEST = 1111
 
@@ -29,6 +33,7 @@ class Scanner : AppCompatActivity() {
         setContentView(R.layout.activity_scanner)
 
         btnYa=findViewById(R.id.btnYa)
+        btnBorrar = findViewById(R.id.btnDelete)
         val scannerView = findViewById<CodeScannerView>(R.id.scanner_view)
 
         codeScanner = CodeScanner(this, scannerView)
@@ -61,10 +66,18 @@ class Scanner : AppCompatActivity() {
         }
         checkPermission()
         btnYa.setOnClickListener {
-            val intent = Intent(this,Agregar::class.java)
+            val intent = Intent(this, Agregar::class.java)
             intent.putExtra("codigo",code)
             startActivity(intent)
         }
+
+        btnBorrar.setOnClickListener {
+            val intent = Intent(this, Eliminar::class.java)
+            intent.putExtra("codigo",code)
+            startActivity(intent)
+        }
+
+
     }
     fun checkPermission() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
